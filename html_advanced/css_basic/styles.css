@@ -1,0 +1,46 @@
+body
+{
+	display: flex;
+	flex-direction: column;
+}
+
+header
+{
+	background-color: rgba(30, 32, 41, 0.3);
+}
+
+main
+{
+	display: flex;
+	flex-direction: row;
+	flex: auto;
+	background-color: lightgrey;
+}
+
+main article
+{
+	flex: 2;
+	overflow-y: auto;
+}
+
+main aside
+{
+	flex: 1;
+	overflow-y: auto;
+	background-color: rgba(112, 165, 245, 0.3);
+}
+
+.navig
+{
+	color: rgba(221, 5, 210, 0.3);
+}
+
+.navig:hover
+{
+	color: aqua;
+}
+
+footer
+{
+	background-color: rgba(48, 70, 69, 0.3);
+}
