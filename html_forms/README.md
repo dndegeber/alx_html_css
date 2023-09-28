@@ -1,0 +1,1 @@
+This is my readme which entails HTML Forms that comprises of Simple, Structure of a web form and HTML5 input types.
