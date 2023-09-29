@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    
+    <form action="my-handling-form-page.html" method="post" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label>Feedback Options:</label>
+            <label for="excellent"><input type="checkbox" id="excellent" name="feedback" value="excellent"> Excellent</label>
+            <label for="good"><input type="checkbox" id="good" name="feedback" value="good"> Good</label>
+            <label for="average"><input type="checkbox" id="average" name="feedback" value="average"> Average</label>
+            <label for="poor"><input type="checkbox" id="poor" name="feedback" value="poor"> Poor</label>
+        </div>
+        <div class="form-group">
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file" accept=".pdf,.doc,.docx" required>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    function validateForm() {
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        var checked = false;
+        checkboxes.forEach(function(checkbox) {
+            if (checkbox.checked) {
+                checked = true;
+            }
+        });
+
+        if (!checked) {
+            alert("Please select at least one feedback option.");
+            return false;
+        }
+
+        return true;
+    }
+</script>
+</body>
+</html>
